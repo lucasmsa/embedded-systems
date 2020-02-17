@@ -5,7 +5,9 @@ var firebase = require('firebase');
 var firebaseApp = firebase.initializeApp();
 var { Timer } = require('easytimer.js');
 var timerInstance = new Timer();
+var ip = require('ip')
 
+ipAdress = ip.address();
 
 
 const app = express();
@@ -19,6 +21,6 @@ app.use('/', (req, res) => {
     res.render("index");
 })
 
-app.listen(3000, () => {
+app.listen(3000, '0.0.0.0', () => {
     console.log('Server listening on port 3000')
 })
