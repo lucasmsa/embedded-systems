@@ -1,0 +1,20 @@
+{
+  "name": "embarcados",
+  "version": "1.0.0",
+  "description": "Projeto de embarcados :)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Moreira, Renan Almeida, Thiago Gomes",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "easytimer": "^1.1.1",
+    "easytimer.js": "^4.1.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "firebase": "^7.8.2"
+  },
+  "devDependencies": {}
+}

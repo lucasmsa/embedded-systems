@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+}
+
+.heading-page {
+    margin-top: 3rem;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.btn {
+    margin: 1rem;
+}
+
+.values {
+    color: blanchedalmond;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 4rem;
+}
+
+hr {
+    border: 1px solid white;
+    width: 35%;
+    margin-bottom: 3rem;
+}
+
+.strt-shower {
+    margin-top: 3rem;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading-page:hover {
+    color: rgb(243, 243, 151);
+}

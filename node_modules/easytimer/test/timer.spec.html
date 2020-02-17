@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+
+    <script src="../node_modules/assert/assert.js"></script>
+    <script src="../node_modules/sinon/lib/sinon.js"></script>
+    <script src="../node_modules/sinon/lib/sinon/call.js"></script>
+    <script src="../node_modules/sinon/lib/sinon/assert.js"></script>
+    <script src="../node_modules/sinon/lib/sinon/util/fake_timers.js"></script>
+    <script src="../node_modules/sinon/lib/sinon/spy.js"></script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../dist/easytimer.min.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="timer.spec.js"></script>
+</head>
+<body>
+    <div id="mocha"></div>
+    <script type="text/javascript" charset="utf-8">
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
+</body>
+
+</html>
