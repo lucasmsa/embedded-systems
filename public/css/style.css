@@ -1,9 +1,15 @@
 body {
-    background-color: black;
+    background-color: #00334e;
+}
+
+.outer-container {
+    background-color: #145374;
+    width: 75%;
+    margin: auto
 }
 
 .heading-page {
-    margin-top: 3rem;
+    margin-top: 1rem;
     color: white;
     font-size: 5rem;
     text-align: center;
@@ -13,6 +19,25 @@ body {
     margin: 1rem;
 }
 
+.shower {
+    width: 10%;
+}
+
+span {
+    display: block;
+    margin-bottom: 4rem;
+}
+
+.fa-shower {
+    color: lightblue;
+}
+
+.fa-shower:hover {
+    color: white;
+}
+
+
+
 .values {
     color: blanchedalmond;
     text-align: center;
@@ -21,9 +46,12 @@ body {
 }
 
 hr {
-    border: 1px solid white;
-    width: 35%;
+    border: 0.5px solid white;
+    width: 55%;
     margin-bottom: 3rem;
+}
+.top-hr {
+    width: 30%;
 }
 
 .strt-shower {
@@ -38,4 +66,8 @@ hr {
 
 .heading-page:hover {
     color: rgb(243, 243, 151);
+}
+
+.timeControl {
+    width: 62.5%;
 }

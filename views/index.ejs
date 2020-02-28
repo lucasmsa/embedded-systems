@@ -7,31 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Smart-Shower</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/c207e029f1.js" crossorigin="anonymous"></script>   
 
 </head>
 
 <body>
-    <div class="container rounded">
-        <h1 class="heading-page">Smart-Shower</h1>
-        <hr>
-        <img class="shower center" src="imgs/cold-shower.png" alt="chuveiro">
-    </div>
-
-    <div id="chronoExample">
-        <div class="values">00:00:00</div>
-        <hr>
-        <div>
-            <button class="startButton btn btn-light center">Start Shower</button>
-            <button class="pauseButton btn btn-warning center">Pause</button>
-            <button class="stopButton btn btn-danger center">Stop Shower</button>
-            <button class="resetButton btn btn-secondary center">Reset</button>
+    <div class='outer-container rounded container' data-aos="zoom-in-down">
+        <div class="container rounded">
+            <h1 class="heading-page">Smart-Shower</h1>
+            <hr class="top-hr">
+            <span style="text-align: center;"><i class="fas fa-shower fa-5x"></i></span>
         </div>
-    </div>
+        
+        <div id="chronoExample">
+            <div class="values">00:00:00</div>
+            <hr>
+            <div class="container timeControl">
+                <div class="row">
+                        <div class="col-md-3 col-lg-3 col-sm-3">
+                            <button class="startButton btn btn-light center">Start Shower</button>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-sm-3">
+                            <button class="pauseButton btn btn-warning center">Pause</button>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-sm-3">
+                            <button class="stopButton btn btn-danger center">Stop Shower</button>
+                        </div>
+                        <div class="col-md-3 col-lg-3 col-sm-3">
+                            <button class="resetButton btn btn-secondary center">Reset</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 

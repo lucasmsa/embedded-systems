@@ -16,6 +16,8 @@ $('#chronoExample .resetButton').click(function() {
 });
 timer.addEventListener('secondsUpdated', function(e) {
     $('#chronoExample .values').html(timer.getTimeValues().toString());
+    timerCounting = timer.getTimeValues()
+    console.log(timerCounting)
 });
 timer.addEventListener('started', function(e) {
     $('#chronoExample .values').html(timer.getTimeValues().toString());
