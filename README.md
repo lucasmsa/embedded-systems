@@ -7,9 +7,9 @@ npm rebuild
 ```
 
 ```
-npm i
+npm i nodemon
 ```
 
 ```
-forever app.js
+nodemon app.js
 ```
