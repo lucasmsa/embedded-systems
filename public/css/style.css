@@ -1,11 +1,12 @@
 body {
     background-color: #00334e;
+    font-family: 'Asap';
 }
 
 .outer-container {
     background-color: #145374;
     width: 75%;
-    margin: auto
+    margin: auto;
 }
 
 .heading-page {
@@ -16,7 +17,7 @@ body {
 }
 
 .btn {
-    margin: 1rem;
+    margin: 0.75rem;
 }
 
 .shower {
@@ -36,8 +37,6 @@ span {
     color: white;
 }
 
-
-
 .values {
     color: blanchedalmond;
     text-align: center;
@@ -45,13 +44,16 @@ span {
     font-size: 4rem;
 }
 
-hr {
-    border: 0.5px solid white;
-    width: 55%;
-    margin-bottom: 3rem;
-}
 .top-hr {
-    width: 30%;
+    border: 0.5px solid white;
+    width: 40%;
+    margin-bottom: 2.5rem;
+}
+
+.mid-hr {
+    border: 0.75px solid white;
+    width: 60%;
+    margin-bottom: 0.5rem;
 }
 
 .strt-shower {
@@ -70,4 +72,23 @@ hr {
 
 .timeControl {
     width: 62.5%;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+}
+
+.flow {
+    padding-top: 1.5rem;
+}
+
+.cost {
+    padding-bottom: 1rem;
+}
+
+.bottom-hr {
+    margin-top: 0;
+    border: 1px solid white;
+    width: 75%;
 }
