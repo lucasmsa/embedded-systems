@@ -1,0 +1,21 @@
+[debug] [2020-02-29T20:08:15.734Z] ----------------------------------------------------------------------
+[debug] [2020-02-29T20:08:15.736Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lucas\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-02-29T20:08:15.736Z] CLI Version:   7.14.0
+[debug] [2020-02-29T20:08:15.737Z] Platform:      win32
+[debug] [2020-02-29T20:08:15.737Z] Node Version:  v12.13.0
+[debug] [2020-02-29T20:08:15.738Z] Time:          Sat Feb 29 2020 17:08:15 GMT-0300 (GMT-03:00)
+[debug] [2020-02-29T20:08:15.738Z] ----------------------------------------------------------------------
+[debug] [2020-02-29T20:08:15.738Z] 
+[debug] [2020-02-29T20:08:15.745Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-29T20:08:15.745Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\lucas\Downloads\firebase-iot-demo-master
+
