@@ -9,7 +9,9 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="https://kit.fontawesome.com/c207e029f1.js" crossorigin="anonymous"></script>   
+    <link href="https://fonts.googleapis.com/css?family=Asap|Bree+Serif&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c207e029f1.js" crossorigin="anonymous">
+    </script>
 
 </head>
 
@@ -20,35 +22,49 @@
             <hr class="top-hr">
             <span style="text-align: center;"><i class="fas fa-shower fa-5x"></i></span>
         </div>
-        
+
         <div id="chronoExample">
             <div class="values">00:00:00</div>
-            <hr>
+            <hr class="mid-hr">
             <div class="container timeControl">
                 <div class="row">
-                        <div class="col-md-3 col-lg-3 col-sm-3">
-                            <button class="startButton btn btn-light center">Start Shower</button>
-                        </div>
-                        <div class="col-md-3 col-lg-3 col-sm-3">
-                            <button class="pauseButton btn btn-warning center">Pause</button>
-                        </div>
-                        <div class="col-md-3 col-lg-3 col-sm-3">
-                            <button class="stopButton btn btn-danger center">Stop Shower</button>
-                        </div>
-                        <div class="col-md-3 col-lg-3 col-sm-3">
-                            <button class="resetButton btn btn-secondary center">Reset</button>
-                        </div>
+                    <div class="col-md-3 col-lg-3 col-sm-3">
+                        <button class="startButton btn btn-sm btn-light center shadow p-3 mb-5">Start Shower</button>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-3">
+                        <button class="pauseButton btn btn-sm btn-warning center shadow p-3 mb-5">Pause</button>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-3">
+                        <button class="stopButton btn btn-sm btn-danger center shadow p-3 mb-5">Stop Shower</button>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-sm-3">
+                        <button class="resetButton btn btn-sm btn-secondary center shadow p-3 mb-5">Reset</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>    
+        <hr class="bottom-hr">
+        <h4 class="flow">Fluxo: </h4>
+        <h4 class="volume">Vazão: </h4>
+        <h4 class="cost">Custo: </h4>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
+
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/easytimer@1.1.1/src/easytimer.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 
 </body>
