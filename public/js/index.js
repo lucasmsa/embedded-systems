@@ -33,7 +33,9 @@ console.log("BANHOSO " + showerRef);
 flowRef.limitToLast(1).on('value', function(snapshot) {
 
     snapshot.forEach(function(childSnapshot) {
-        var childData = childSnapshot.val();
+        let childData = childSnapshot.val();
+        // Working with the react app connection
+        childData = childData.value;
         console.log("Fluxo: " + childData);
         flowElement.html("Fluxo: " + (childData / 1000).toFixed(4) + " L");
 
@@ -75,9 +77,15 @@ $('#chronoExample .pauseButton').click(function() {
 });
 $('#chronoExample .stopButton').click(function() {
     timer.stop();
+    showerRef.set({value: 0})
+    var c = document.getElementById('the_canvas_element_id');
+    var t = c.getContext('2d');
+    flowRef.push({value: 0.0})
 });
 $('#chronoExample .resetButton').click(function() {
     timer.reset();
+    showerRef.set({value: 0})
+    flowRef.push({value: 0.0})
 });
 timer.addEventListener('secondsUpdated', function(e) {
     $('#chronoExample .values').html(timer.getTimeValues().toString());
