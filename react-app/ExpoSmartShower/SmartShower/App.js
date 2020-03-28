@@ -4,6 +4,7 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { db } from './src/config'
 
 let firstChildFlag = 0
+var flowLoop
 
 export default function App() {
   
@@ -38,7 +39,7 @@ export default function App() {
       firstChildFlag = 1
     }
 
-    setInterval(function() {
+    flowLoop = setInterval(function() {
         flowRef.limitToLast(1).on('child_added', (snapshot) => {
           oldChild = snapshot.val()
           oldChild = oldChild.value
@@ -67,7 +68,11 @@ export default function App() {
     })
     
     firstChildFlag = 0
+
+    clearInterval(flowLoop)
+    
     db.goOffline()
+
   }
   return (
     
