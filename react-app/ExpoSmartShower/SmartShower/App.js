@@ -12,6 +12,11 @@ export default function App() {
     
     db.goOnline()
 
+    if(firstChildFlag == 0){
+      db.ref('waterFlow').remove();
+    }
+
+
     var oldChild
     function getRandomValue(min, max) {
       return Math.floor(Math.random() * (max - min + 1) ) + min;
@@ -33,7 +38,7 @@ export default function App() {
       firstChildFlag = 1
     }
 
-      setInterval(function() {
+    setInterval(function() {
         flowRef.limitToLast(1).on('child_added', (snapshot) => {
           oldChild = snapshot.val()
           oldChild = oldChild.value
@@ -60,11 +65,6 @@ export default function App() {
     db.ref('shower').set({
       value: 0
     })
-    setTimeout(()=> { 
-      db.ref('waterFlow').push({
-        value: 0
-      })
-    }, 2000)
     
     firstChildFlag = 0
     db.goOffline()
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     padding: "3%",
     marginTop: '10%',
-    width: "75%",
+    width: "90%",
     fontSize: 25,
   },
   showerOffPressed: {
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
     fontWeight: "200",
     padding: "3%",
     marginTop: '10%',
-    width: "75%",
+    width: "90%",
     fontSize: 25,
   }
 });
