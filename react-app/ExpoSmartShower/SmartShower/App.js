@@ -4,7 +4,6 @@ import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { db } from './src/config'
 
 let firstChildFlag = 0
-let on = 1
 
 export default function App() {
   
@@ -27,36 +26,47 @@ export default function App() {
     let flowRef = db.ref('waterFlow')
 
     if(firstChildFlag == 0){
+
       flowRef.push({
         value: 1
       })
       firstChildFlag = 1
     }
 
-    setInterval(function() {
+      setInterval(function() {
         flowRef.limitToLast(1).on('child_added', (snapshot) => {
           oldChild = snapshot.val()
           oldChild = oldChild.value
         });
-        let randomFlow = getRandomValue(11, 14)
-        let newChild = oldChild + randomFlow
 
-        flowRef.push({
-          value: newChild
-        })
+        if(oldChild > 0){
+          let randomFlow = getRandomValue(11, 14)
+          let newChild = oldChild + randomFlow
+    
+          flowRef.push({
+            value: newChild
+          })
+        }
+        else if (oldChild === 0){
+          flowRef.push({ value: 0 })
+        }
+        
       }, 1000)    
     }
     
-
+  
   showerOffPressed = () =>{
     Alert.alert("Shower is off!")
-    on = 0
     db.ref('shower').set({
       value: 0
     })
-    db.ref('waterFlow').push({
-      value: 0
-    })
+    setTimeout(()=> { 
+      db.ref('waterFlow').push({
+        value: 0
+      })
+    }, 2000)
+    
+    firstChildFlag = 0
     db.goOffline()
   }
   return (
@@ -76,10 +86,11 @@ export default function App() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#204051',
+    backgroundColor: '#00334e',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -91,6 +102,7 @@ const styles = StyleSheet.create({
   showerPressed: {
     backgroundColor: "#3b6978",
     fontWeight: "200",
+    color: "#fff",
     padding: "3%",
     marginTop: '10%',
     width: "75%",

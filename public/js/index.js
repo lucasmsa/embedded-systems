@@ -5,6 +5,8 @@ var volumeElement = $('.volume');
 var costElement = $('.cost');
 console.log(flowElement);
 
+let firstCase = 0
+
 var config = {
     apiKey: "AIzaSyDftOy-HCtgqFWq9H-FsP-Yoi8BuXLe9Ks",
     authDomain: "smart-shower-master.firebaseapp.com",
@@ -54,15 +56,37 @@ showerRef.limitToLast(1).on('value', function(snapshot) {
 
         if (showerStatus == 1 && flag == 0) {
             flag = 1;
+            firstCase = 0
             timer.start();
-        } else if (showerStatus == 0) {
+        } else if (showerStatus == 0 && firstCase == 1) {
             flag = 0;
             timer.stop();
+        }
+        else if (showerStatus == 0 && firstCase == 0 && flag == 1){
+
+            var myWindow = window.open('', '', 'width=500,height=400');
+            var doc = myWindow.document;
+            doc.open();
+            console.log("aqui na outra funcao")
+            console.log(flowElement[0].textContent)
+            doc.write("Tempo de banho: " + timer.getTimeValues().toString() + " | " + flowElement[0].textContent + 
+            " | " + volumeElement[0].textContent + " | " + costElement[0].textContent);
+            doc.close();
+            timer.stop();
+            
         }
     });
 });
 
 // 0.004890; custo por litro, em centavos (dados da CAGEPA: 1m³ = R$ 4,89 em Nov/19)
+function createWindow(){
+    var divText = document.body.innerHTML;
+    var myWindow = window.open('', '', 'width=750,height=200');
+    var doc = myWindow.document;
+    doc.open();
+    doc.write(divText);
+    doc.close();
+}
 
 
 // Time variables
@@ -78,14 +102,12 @@ $('#chronoExample .pauseButton').click(function() {
 $('#chronoExample .stopButton').click(function() {
     timer.stop();
     showerRef.set({value: 0})
-    var c = document.getElementById('the_canvas_element_id');
-    var t = c.getContext('2d');
-    flowRef.push({value: 0.0})
+    flowRef.push({value: 0})
 });
 $('#chronoExample .resetButton').click(function() {
     timer.reset();
     showerRef.set({value: 0})
-    flowRef.push({value: 0.0})
+    flowRef.push({value: 0})
 });
 timer.addEventListener('secondsUpdated', function(e) {
     $('#chronoExample .values').html(timer.getTimeValues().toString());
