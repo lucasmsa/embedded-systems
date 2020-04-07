@@ -5,7 +5,7 @@
 
 # Smart Shower 💧
 The idea was to monitor shower price using an ESP8266 and a flow sensor with firebase integration, reading and writing from its realtime database, calculating the water cost based on the region that the user is,
-but due to the covid outbreak/isolation of group members the connection with the web app was hardened, so aside from the esp connection part we've made a simple react-native app connecting with the web app through firebase
+but due to the covid outbreak/isolation of group members the connection with the web app was hardened, so aside from the esp connection part we've made a simple react-native app sharing values with the web app through firebase
 
 # How to Run
 ```
